@@ -128,7 +128,7 @@ animation.addEventListener('animationend', () => {
 // About Section
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 350){
+    if(window.scrollY > 200){
         document.querySelector('.aboutMe').classList.add('aboutMeAnimation');
         document.querySelector('.about-photo').classList.add('about-photoAnimation');
         document.querySelector('.about-section').classList.add('about-sectionAnimation');
