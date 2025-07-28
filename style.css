@@ -301,7 +301,7 @@ body {
 
 .about-photo {
     position: relative;
-    top: -39px;
+    top: -77px;
     height: 76vh;
     width: 18vw;
     opacity: 0;
@@ -356,6 +356,6 @@ body {
 .photo img {
     height: 93vh;
     position: relative;
-    top: -222px;
+    top: -253px;
     left: -23px;
 }
