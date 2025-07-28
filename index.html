@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Luckiest+Guy&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navBar">
+            <div class="nav-left">
+                Ankit
+            </div>
+            <div class="nav-right">
+                <a href=""><button class="nav-btn home">Home</button></a>
+                <a href=""><button class="nav-btn about">About</button></a>
+                <a href=""><button class="nav-btn projects">Projects</button></a>
+                <a href=""><button class="nav-btn skills">Skills</button></a>
+                <a href=""><button class="nav-btn contact">Contacts</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Website opening animation  -->
+    <div class="animate-welcome" id="animate-welcome"></div>
+
+    <!-- Background Stars  -->
+    <div class="stars-container"></div>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Heyy I'm Ankit !</h1>
+                <div class="hero-content-quote">
+                    <span>
+                        <!-- Text stored Dynamically -->
+                    </span>
+                    <span class="cursorr"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="aboutSection" id="about">
+        <div class="aboutMe">
+            <div>
+                <h1>About Me</h1>
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="about-intro">
+                <h3>Hi, I’m Ankit <br> a BCA student building <br> my way into full-stack development.</h3>
+            </div>
+            <div class="about-content">
+                <p>
+                    I got into frontend with <strong><span id="lang-change"></span></strong> <br>These days, I’m diving
+                    into the full-stack world with
+                    <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.
+                </p>
+                <p>
+                    I believe good tech should be simple, accessible, and a little magical. I’m all about <br>building
+                    projects
+                    that aren’t just pretty — but useful and scalable. 
+                </p>
+                <p>
+                    I’m a computer applications student from Odisha, India,<br> currently diving deep into the world of
+                    web
+                    development.
+                    What started as casual curiosity in HTML and CSS has now turned into a daily obsession with clean
+                    code
+                    and impactful design.
+                </p>
+                <p>
+                    Outside coding, you’ll find me with a thriller novel or sketching random UI ideas late at night with
+                    chai.
+                </p>
+            </div>
+        </div>
+        <div class="about-photo"> 
+            <div class="photo-container-back"></div>
+            <div class="photo-container">
+                <div class="photo-bg"></div>
+                <div class="photo">
+                    <img src="images/Photo.png" alt="Profile Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+    Projects / Work Showcase your best projects with live links and GitHub
+    Skills / Tools What you know: languages, frameworks, tools
+    Contact Me Simple form or direct email/social links -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
