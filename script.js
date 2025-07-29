@@ -128,10 +128,14 @@ animation.addEventListener('animationend', () => {
 // About Section
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 200){
+    if(window.scrollY > 150){
         document.querySelector('.aboutMe').classList.add('aboutMeAnimation');
-        document.querySelector('.about-photo').classList.add('about-photoAnimation');
+        document.querySelector('.photo-container').classList.add('about-photoAnimation');
         document.querySelector('.about-section').classList.add('about-sectionAnimation');
+    }
+    if(window.scrollY > 1000){
+        document.querySelector('.projects-head').classList.add('projectHeadAnimation');
+        document.querySelector('.projects-cards-content').classList.add('projectsAnimation');
     }
 });
 
@@ -168,3 +172,21 @@ function langChange() {
 }
 
 langChange();
+
+
+  const Container = document.querySelector('.projects-cards');
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      Container.classList.add('hover-active');
+      card.classList.add('hovered');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      Container.classList.remove('hover-active');
+      card.classList.remove('hovered');
+      card.style.transition = "all 1s";
+    //   title_desc.
+  });
+  });

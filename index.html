@@ -23,20 +23,14 @@
                 Ankit
             </div>
             <div class="nav-right">
-                <a href=""><button class="nav-btn home">Home</button></a>
-                <a href=""><button class="nav-btn about">About</button></a>
-                <a href=""><button class="nav-btn projects">Projects</button></a>
+                <a href="#home"><button class="nav-btn home">Home</button></a>
+                <a href="#about"><button class="nav-btn about">About</button></a>
+                <a href="#projects"><button class="nav-btn projects">Projects</button></a>
                 <a href=""><button class="nav-btn skills">Skills</button></a>
                 <a href=""><button class="nav-btn contact">Contacts</button></a>
             </div>
         </nav>
     </header>
-
-    <!-- Website opening animation  -->
-    <div class="animate-welcome" id="animate-welcome"></div>
-
-    <!-- Background Stars  -->
-    <div class="stars-container"></div>
 
     <!-- Hero Section -->
     <section id="home">
@@ -52,6 +46,15 @@
             </div>
         </div>
     </section>
+    <hr>
+
+    <!-- Website opening animation  -->
+    <div class="animate-welcome" id="animate-welcome"></div>
+
+
+    <!-- Background Stars  -->
+    <div class="stars-container"></div>
+
 
     <!-- About Section -->
     <section class="aboutSection" id="about">
@@ -73,7 +76,7 @@
                 <p>
                     I believe good tech should be simple, accessible, and a little magical. I’m all about <br>building
                     projects
-                    that aren’t just pretty — but useful and scalable. 
+                    that aren’t just pretty — but useful and scalable.
                 </p>
                 <p>
                     I’m a computer applications student from Odisha, India,<br> currently diving deep into the world of
@@ -89,12 +92,51 @@
                 </p>
             </div>
         </div>
-        <div class="about-photo"> 
-            <div class="photo-container-back"></div>
-            <div class="photo-container">
-                <div class="photo-bg"></div>
-                <div class="photo">
-                    <img src="images/Photo.png" alt="Profile Photo">
+        <!-- <div class="about-photo"> -->
+        <div class="photo-container">
+            <div class="photo-bg"></div>
+            <div class="photo">
+                <img src="images/Photo.png" alt="Profile Photo">
+            </div>
+        </div>
+        <!-- </div> -->
+    </section>
+
+    <!-- Project Section  -->
+    <section class="projectSection" id="projects">
+        <div class="projects-content">
+            <div class="projects-head">Projects</div>
+            <div class="projects-cards-content">
+                <div class="projects-cards">
+                    <div class="card portfolio">
+                        <div class="card-title ">Portfolio</div>
+                        <div class="card-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Portfolio.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-desc ">A sleek personal portfolio built with a dark theme.
+                            Showcases skills, projects, and contact details.
+                        </div>
+                    </div>
+                    <div class="card studentzone">
+                        <div class="card-title ">Student-Zone</div>
+                        <div class="card-image">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/Student-Zone.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-desc ">A centralized platform for college notes, assignments, and updates.
+                            Designed to help students access everything in one place.
+                        </div>
+                    </div>
+                    <!-- <div class="card bazaarlink">
+                        <div class="card-title "></div>
+                        <div class="card-image"></div>
+                        <div class="card-desc "></div>
+                    </div> -->
                 </div>
             </div>
         </div>

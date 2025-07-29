@@ -6,6 +6,10 @@
     color: #f0f0f0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     /* background-color: #0d0d0d; */
@@ -272,6 +276,7 @@ body {
     border: 2px solid #212020;
     border-right: none;
     border-left: none;
+    z-index: -1;
     opacity: 0;
 }
 
@@ -305,6 +310,7 @@ body {
     height: 76vh;
     width: 18vw;
     opacity: 0;
+    z-index: 1;
 }
 
 .about-photoAnimation {
@@ -314,33 +320,25 @@ body {
 @keyframes photoAnimation {
     0% {
         opacity: 0;
-        transform: translateY(3rem);
+        transform: translateX(3rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
-}
-
-.photo-container-back {
-    height: 76vh;
-    width: 18vw;
-    backdrop-filter: blur(5px);
-    position: absolute;
-    border-radius: 0 0 0 10vw;
-    right: 14vw;
-    top: -18vh;
 }
 
 .photo-container {
     height: 76vh;
     width: 18vw;
     backdrop-filter: blur(5px);
-    position: absolute;
+    position: relative;
     border-radius: 0 0 10vw 10vw;
     right: 14vw;
-    top: -18vh;
+    top: -23vh;
+    z-index: 2;
+    opacity: 0;
     overflow: hidden;
 }
 
@@ -349,13 +347,226 @@ body {
     width: 18vw;
     position: relative;
     top: 285px;
+    z-index: 3;
     background-color: #212020;
     border-radius: 50%;
 }
 
 .photo img {
-    height: 93vh;
+    height: 101vh;
     position: relative;
-    top: -253px;
-    left: -23px;
+    top: -295px;
+    left: -28px;
+    z-index: 4;
+}
+
+/* Projects Section  */
+.projectSection {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.projects-head {
+    color: rgb(255, 255, 255);
+    font-size: 1.9rem;
+    font-weight: 700;
+    padding-left: 2.5rem;
+    opacity: 0;
+}
+
+.projectHeadAnimation {
+    animation: headAnimation 1s ease-in 1 forwards;
+}
+
+@keyframes headAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.projects-cards-content {
+    height: 60vh;
+    width: 75vw;
+    padding: 0 2.5rem;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border-top: 2px solid rgb(68, 68, 68);
+    border-bottom: 2px solid rgb(68, 68, 68);
+    opacity: 0;
+}
+
+.projectsAnimation{
+    animation: projectsAnimation 1s ease  1 forwards;
+}
+
+@keyframes projectsAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects-content {
+    flex-direction: column;
+    display: flex;
+    height: 85vh;
+    color: rgb(255, 255, 255);
+    width: 80vw;
+    margin: auto;
+    padding: 4rem 2.5rem 0 2.5rem;
+    gap: 3rem;
+}
+
+.projects-cards {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    height: 30vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.card-title {
+    height: 2.5rem;
+    width: 18vw;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    z-index: 0;
+    position: absolute;
+    opacity: 0;
+    transition: transform 1s ease, opacity 0.4s ease;
+}
+
+.card-desc {
+    height: auto;
+    width: 28vw;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 16rem;
+    text-align: center;
+    transform: scale(0.5);
+    transition: transform 1s ease, opacity 0.4s ease;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-image {
+    height: auto;
+    width: 20vw;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cover the card without distortion */
+  border-radius: 10px; /* match your card design */
+  display: block;
+}
+
+.card-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cover the card without distortion */
+  border-radius: 10px; /* match your card design */
+  display: block;
+}
+
+.card:hover {
+    transform: scale(1.04);
+    transition: all 1s;
+}
+
+.card:hover .card-title {
+    /* animation: titleUp 1s ease 1 forwards; */
+    transform: translateY(-3rem);
+    opacity: 1;
+}
+
+.card:hover .card-desc {
+    /* animation: descriptionDown 0.9s ease 1 forwards; */
+    transform: translateY(15rem);
+    opacity: 1;
+}
+
+/* @keyframes titleUp {
+    0% {
+        opacity: 0;
+
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-5rem);
+    }
+} */
+
+
+/* @keyframes descriptionDown {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);      
+        transform: translateY(0), scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(16rem);
+    }
+} */
+
+.projects-cards.hover-active .card {
+    filter: blur(3px);
+}
+
+.projects-cards.hover-active .card:hoverered {
+    filter: none;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.projects-cards.hover-active .card {
+    filter: blur(2px);
+    transform: scale(0.95);
+    transition: all 1s;
+}
+
+/* Remove blur from hovered card */
+.projects-cards.hover-active .card.hovered {
+    filter: blur(0);
+    transform: scale(1.05);
+    z-index: 1;
 }
