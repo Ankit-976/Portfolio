@@ -128,12 +128,12 @@ animation.addEventListener('animationend', () => {
 // About Section
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY > 150){
+    if (window.scrollY > 150) {
         document.querySelector('.aboutMe').classList.add('aboutMeAnimation');
         document.querySelector('.photo-container').classList.add('about-photoAnimation');
         document.querySelector('.about-section').classList.add('about-sectionAnimation');
     }
-    if(window.scrollY > 1000){
+    if (window.scrollY > 1000) {
         document.querySelector('.projects-head').classList.add('projectHeadAnimation');
         document.querySelector('.projects-cards-content').classList.add('projectsAnimation');
     }
@@ -173,20 +173,38 @@ function langChange() {
 
 langChange();
 
+// Projects Section 
 
-  const Container = document.querySelector('.projects-cards');
-  const cards = document.querySelectorAll('.card');
+// Card hover scale effect 
+const Container = document.querySelector('.projects-cards');
+const cards = document.querySelectorAll('.card');
 
-  cards.forEach(card => {
+cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-      Container.classList.add('hover-active');
-      card.classList.add('hovered');
+        Container.classList.add('hover-active');
+        card.classList.add('hovered');
     });
 
     card.addEventListener('mouseleave', () => {
-      Container.classList.remove('hover-active');
-      card.classList.remove('hovered');
-      card.style.transition = "all 1s";
-    //   title_desc.
-  });
-  });
+        Container.classList.remove('hover-active');
+        card.classList.remove('hovered');
+        card.style.transition = "all 1s";
+        //   title_desc.
+    });
+});
+
+
+// Card Click Effect 
+// const clicked = document.querySelectorAll('.card');
+// clicked.forEach((card) => {
+//     card.addEventListener('click', () => {
+//         card.style.transform = "scale(0.91)";
+//         card.style.transition = "transform 0.6s ease";
+//         setTimeout(() => {
+//             card.style.transform = "";
+//         }, 200)
+//     })
+// }
+// )
+
+
