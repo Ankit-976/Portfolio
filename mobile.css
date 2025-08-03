@@ -36,7 +36,7 @@
         width: 70vw;
         display: flex;
         flex-direction: column-reverse;
-        /* margin: 13rem auto 0; */
+        margin: 13rem auto 0;
         margin: auto;
         align-items: center;
         justify-content: space-between;
