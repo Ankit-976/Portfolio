@@ -15,6 +15,8 @@ body {
     line-height: 1.6;
     margin: 0;
     background: #0b0c10;
+    padding-top: 6vh;
+    overflow-x: hidden;
 }
 
 hr {
@@ -23,27 +25,6 @@ hr {
     margin: auto;
 }
 
-/* .animate-welcome {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    animation: intro 3s ease 1.1s forwards;
-    z-index: 9999;
-}
-
-@keyframes intro {
-    0% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(5);
-    }
-} */
 
 /* Background Stars  */
 
@@ -217,7 +198,6 @@ hr {
 
 .hero-content span {
     font-size: 1.3rem;
-
 }
 
 .hero-content-quote {
@@ -446,11 +426,6 @@ hr {
     transform: rotateY(180deg);
 }
 
-/* FLIP on click for mobile (via JS) */
-.flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -494,9 +469,9 @@ hr {
 
 /* Projects Section  */
 .projectSection {
-    height: 113vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
-    display: flex;
 }
 
 .projects-head {
@@ -524,8 +499,9 @@ hr {
 }
 
 .projects-cards-content {
-    height: 60vh;
-    width: 75vw;
+    min-height: 60vh;
+    height: auto;
+    width: auto;
     padding: 0 2.5rem;
     backdrop-filter: blur(2px);
     display: flex;
@@ -556,7 +532,8 @@ hr {
 .projects-content {
     flex-direction: column;
     display: flex;
-    height: 85vh;
+    min-height: 85vh;
+    height: auto;
     color: rgb(255, 255, 255);
     width: 80vw;
     margin: auto;

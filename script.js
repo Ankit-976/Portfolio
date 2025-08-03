@@ -217,13 +217,13 @@ cards.forEach(card => {
 
 
 // Card Click Effect
-const clicked = document.querySelector('.about-content button');
-    clicked.addEventListener('click', () => {
-        clicked.style.transform = "scale(0.91)";
-        clicked.style.transition = "transform 0.6s ease";
-        setTimeout(() => {
-            clicked.style.transform = "";
-        }, 200)
-    })
+// const clicked = document.querySelector('.about-content button');
+//     clicked.addEventListener('click', () => {
+//         clicked.style.transform = "scale(0.91)";
+//         clicked.style.transition = "transform 0.6s ease";
+//         setTimeout(() => {
+//             clicked.style.transform = "";
+//         }, 200)
+//     })
 
 
