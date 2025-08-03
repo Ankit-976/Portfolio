@@ -18,7 +18,7 @@
 
     <!-- Header Section -->
     <header>
-        <nav class="navBar">
+        <nav class="navBar navBarAnimation">
             <div class="nav-left">
                 Ankit
             </div>
@@ -28,6 +28,7 @@
                 <a href="#projects"><button class="nav-btn projects">Projects</button></a>
                 <a href=""><button class="nav-btn skills">Skills</button></a>
                 <a href=""><button class="nav-btn contact">Contacts</button></a>
+                <button class="hamburger"><img src="images/hamburger.png" alt="Hamburger" height="20px"></button>
             </div>
         </nav>
     </header>
@@ -36,19 +37,25 @@
     <section id="home">
         <div class="hero-section">
             <div class="hero-content">
-                <h1>Heyy I'm Ankit !</h1>
+                <h4 class="h4-animation">Designs and Builds Brands</h4>
+                <h1 class="h1-animation">Heyy I'm Ankit!</h1>
                 <div class="hero-content-quote">
                     <span>
                         <!-- Text stored Dynamically -->
                     </span>
-                    <span class="cursorr"></span>
+                    <span class="cursorr cursor"></span>
                 </div>
+            </div>
+            <div class="heroPhotosection heroPhotoAnimation">
+                <img src="images/Photo.png" alt="Photo">
             </div>
         </div>
     </section>
 
+    <hr>
+
     <!-- Website opening animation  -->
-    <div class="animate-welcome" id="animate-welcome"></div>
+    <!-- <div class="animate-welcome" id="animate-welcome"></div> -->
 
 
     <!-- Background Stars  -->
@@ -72,34 +79,73 @@
                     into the full-stack world with
                     <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>.
                 </p>
-                <p>
-                    I believe good tech should be simple, accessible, and a little magical. I’m all about <br>building
-                    projects
-                    that aren’t just pretty — but useful and scalable.
-                </p>
-                <p>
-                    I’m a computer applications student from Odisha, India,<br> currently diving deep into the world of
-                    web
-                    development.
-                    What started as casual curiosity in HTML and CSS has now turned into a daily obsession with clean
-                    code
-                    and impactful design.
-                </p>
-                <p>
-                    Outside coding, you’ll find me with a thriller novel or sketching random UI ideas late at night with
-                    chai.
-                </p>
-            </div>
-        </div>
-
-        <!-- <div class="about-photo"> -->
-        <div class="photo-container">
-            <div class="photo-bg"></div>
-            <div class="photo">
-                <img src="images/Photo.png" alt="Profile Photo">
+                <div class="resume">
+                    <h1>My Resume</h1>
+                    <span>Download</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <hr>
+
+    <!-- Education Section  -->
+    <section class="education">
+        <h2>🎓 My Education</h2>
+
+        <div class="card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="icon">🎓</div>
+                        <h3>Batchelor In Computer Application</h3>
+                        <p>GACR COLLEGE - 2024-27</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <!-- <p>Government Autonomous College, Rourkela</p> -->
+                        <p>I'm currently pursuing BCA degree under. <br>
+                            Located in Rourkela, Odisha, 796004</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="icon">📘</div>
+                        <h3>Higher Secondary Education</h3>
+                        <p>Kendriya Vidyalaya 2022-24</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3></h3>
+                        <!-- <p>Kendriya Vidyalaya, Jamshedpur</p> -->
+                        <p>I have completed my 12th in Science under CBSE Board. <br>
+                            Located in Tatanagar, Jamshedpur, Jharkhand 831002 <br>
+                            Marks Secured : 78.6%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="icon">📗</div>
+                        <h3>Matriculation</h3>
+                        <p>Kendriya Vidyalaya 2021-22</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <!-- <p>kendriya Vidyalaya Tatanagar, Jamshedpur</p> -->
+                        <p>I have completed my 10th under CBSE Board. <br>
+                            Located in Tatanagar, Jamshedpur, Jharkhand 831002 <br>
+                            Marks Secured : 82.4%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
 
     <!-- Project Section  -->
     <section class="projectSection" id="projects">
@@ -107,8 +153,9 @@
             <div class="projects-head">Projects</div>
             <div class="projects-cards-content">
                 <div class="projects-cards">
-                    <div class="card portfolio" onclick="window.open('https://ankit-976.github.io/Portfolio/', '_blank')">
-                        <div class="card-title " >Portfolio</div>
+                    <div class="card portfolio"
+                        onclick="window.open('https://ankit-976.github.io/Portfolio/', '_blank')">
+                        <div class="card-title ">Portfolio</div>
                         <div class="card-image">
                             <video autoplay loop muted playsinline>
                                 <source src="videos/Portfolio.mp4" type="video/mp4" />
@@ -119,7 +166,8 @@
                             Showcases skills, projects, and contact details.
                         </div>
                     </div>
-                    <div class="card studentzone" onclick="window.open('https://ankit-976.github.io/Student-Zone/', '_blank')">
+                    <div class="card studentzone"
+                        onclick="window.open('https://ankit-976.github.io/Student-Zone/', '_blank')">
                         <div class="card-title ">Student-Zone</div>
                         <div class="card-image">
                             <video autoplay loop muted playsinline>
@@ -140,6 +188,8 @@
             </div>
         </div>
     </section>
+
+    <hr>
 
 
     <!-- 

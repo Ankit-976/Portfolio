@@ -9,9 +9,9 @@ window.onbeforeunload = function () {
 window.scrollTo(0, 0);
 
 
-const text = "Welcome"
-let animation = document.getElementById('animate-welcome');
-let i = 0;
+// const text = "Welcome"
+// let animation = document.getElementById('animate-welcome');
+// let i = 0;
 
 
 // Background Stars 
@@ -37,35 +37,35 @@ setInterval(() => {
 }, 1000);
 
 // Typewrite Effect Function 
-function typewriterEffect(element, text, speed) {
-    element.innerHTML = "";
-    let i = 0;
+// function typewriterEffect(element, text, speed) {
+//     element.innerHTML = "";
+//     let i = 0;
 
-    function type() {
-        if (i < text.length) {
-            if (text[i] === "|") {
-                element.innerHTML += "<br>";
-            } else {
-                element.innerHTML += text[i];
-            }
-            i++;
-            setTimeout(type, speed);
-        }
-        else {
-            element.classList.remove('cursor');
-        }
-    }
+//     function type() {
+//         if (i < text.length) {
+//             if (text[i] === "|") {
+//                 element.innerHTML += "<br>";
+//             } else {
+//                 element.innerHTML += text[i];
+//             }
+//             i++;
+//             setTimeout(type, speed);
+//         }
+//         else {
+//             element.classList.remove('cursor');
+//         }
+//     }
 
-    type();
-}
+//     type();
+// }
 
-// Welcome animation call 
-if (window.scrollY < 350) {
-    typewriterEffect(animation, text, 150);
-}
+// // Welcome animation call 
+// if (window.scrollY < 350) {
+//     typewriterEffect(animation, text, 150);
+// }
 
 
-const heroQuote = "Learning as I go, building what I can, and having fun with code| — <i>that’s the whole point</i>"
+const heroQuote = "Learning, building what I can, and having fun with code| — <i>that’s the whole point</i>"
 let Quote = document.querySelector('.hero-content span');
 function typewriterQuote() {
     Quote.innerHTML = "";  // Clear old text
@@ -116,24 +116,29 @@ function typewriterQuote() {
     type();
 }
 
+typewriterQuote();
 
-animation.addEventListener('animationend', () => {
-    animation.remove();
-    document.querySelector('.navBar').classList.add('navBarAnimation');
-    document.querySelector('.hero-content h1').classList.add('h1-animation');
-    document.querySelector('.cursorr').classList.add('cursor');
-    typewriterQuote();
-});
+// animation.addEventListener('animationend', () => {
+//     animation.remove();
+//     document.querySelector('.navBar').classList.add('navBarAnimation');
+//     document.querySelector('.hero-content h1').classList.add('h1-animation');
+//     document.querySelector('.hero-content h4').classList.add('h4-animation');
+//     document.querySelector('.cursorr').classList.add('cursor');
+//     document.querySelector('.heroPhotosection').classList.add('heroPhotoAnimation');
+// });
 
 // About Section
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 100) {
         document.querySelector('.aboutMe').classList.add('aboutMeAnimation');
-        document.querySelector('.photo-container').classList.add('about-photoAnimation');
         document.querySelector('.about-section').classList.add('about-sectionAnimation');
     }
-    if (window.scrollY > 1000) {
+    if(window.scrollY > 1200){
+        document.querySelector('.education').classList.add('educationAnimation');
+
+    }
+    if (window.scrollY > 1800) {
         document.querySelector('.projects-head').classList.add('projectHeadAnimation');
         document.querySelector('.projects-cards-content').classList.add('projectsAnimation');
     }
@@ -173,6 +178,23 @@ function langChange() {
 
 langChange();
 
+// Education Section 
+const isMobile = window.innerWidth < 768;
+const cardss = document.querySelectorAll('.flip-card');
+
+if (isMobile) {
+    cardss.forEach((card) => {
+        card.addEventListener('click', () => {
+            // Remove flipped from all other cards
+            cardss.forEach(c => {
+                if (c !== card) c.classList.remove('flipped');
+            });
+            // Toggle current card
+            card.classList.toggle('flipped');
+        });
+    });
+}
+
 // Projects Section 
 
 // Card hover scale effect 
@@ -194,17 +216,14 @@ cards.forEach(card => {
 });
 
 
-// Card Click Effect 
-// const clicked = document.querySelectorAll('.card');
-// clicked.forEach((card) => {
-//     card.addEventListener('click', () => {
-//         card.style.transform = "scale(0.91)";
-//         card.style.transition = "transform 0.6s ease";
-//         setTimeout(() => {
-//             card.style.transform = "";
-//         }, 200)
-//     })
-// }
-// )
+// Card Click Effect
+const clicked = document.querySelector('.about-content button');
+    clicked.addEventListener('click', () => {
+        clicked.style.transform = "scale(0.91)";
+        clicked.style.transition = "transform 0.6s ease";
+        setTimeout(() => {
+            clicked.style.transform = "";
+        }, 200)
+    })
 
 
