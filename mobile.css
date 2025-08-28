@@ -25,7 +25,6 @@
         width: 85vw;
         position: fixed;
         top: 0;
-        background-color: red;
         left: 7.5vw;
     }
 
@@ -265,7 +264,6 @@
         width: 85vw;
         position: fixed;
         top: 0;
-        background-color: red;
         left: 7.5vw;
     }
 
@@ -281,11 +279,12 @@
         width: 88vw;
         display: flex;
         flex-direction: column-reverse;
-        margin: 0 0 0 2rem ;
+        margin: 0 0 0 2rem;
         align-items: center;
         justify-content: space-evenly;
         position: relative;
         top: 3rem;
+        overflow: hidden;
     }
 
 
@@ -303,6 +302,12 @@
 
     .hero-content span {
         font-size: 1.1rem;
+    }
+
+    .heroPhotosection img {
+        height: 355px;
+        /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); */
+        filter: drop-shadow(0 -9px 14px rgba(51, 51, 51, 0.733));
     }
 
     .cursor {
@@ -324,7 +329,7 @@
     }
 
     .aboutMe div {
-        padding-left: 2rem;
+        padding-left: 6rem;
         height: 5rem;
         border: none;
         border-radius: 0;
@@ -338,7 +343,7 @@
         border: none;
     }
 
-    .about-intro{
+    .about-intro {
         font-size: 1.2rem;
     }
 
@@ -445,7 +450,6 @@
     .card-image {
         height: auto;
         width: 60vw;
-        background-color: red;
         border-radius: 20px;
         z-index: 1;
         overflow: hidden;
